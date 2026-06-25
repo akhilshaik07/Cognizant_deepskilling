@@ -1,0 +1,15 @@
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\bin\Debug\net10.0\M2-DSA.exe
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\bin\Debug\net10.0\M2-DSA.deps.json
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\bin\Debug\net10.0\M2-DSA.runtimeconfig.json
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\bin\Debug\net10.0\M2-DSA.dll
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\bin\Debug\net10.0\M2-DSA.pdb
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.AssemblyInfoInputs.cache
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.AssemblyInfo.cs
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.csproj.CoreCompileInputs.cache
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.sourcelink.json
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.dll
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\refint\M2-DSA.dll
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.pdb
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\M2-DSA.genruntimeconfig.cache
+C:\Users\user\downloads\deepskilling\M2-DSA\Financialforecasting\obj\Debug\net10.0\ref\M2-DSA.dll
