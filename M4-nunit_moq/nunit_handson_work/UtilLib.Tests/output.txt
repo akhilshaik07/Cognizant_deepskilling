@@ -1,0 +1,24 @@
+1. Initial Test Run (Green):
+Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
+Passed Test Cases:
+- UtilLib.Tests.UrlHostNameParserTests.ParseHostName_ValidHttpsUrl_ReturnsHostName (Passed)
+- UtilLib.Tests.UrlHostNameParserTests.ParseHostName_InvalidProtocolUrl_ThrowsFormatException (Passed)
+
+2. Broken Test Run (Red):
+We temporarily modified the hostName parsing logic in UrlHostNameParser.cs:
+    string hostName = url.Split(':')[1].Substring(2).Split('/')[0] + "broken";
+
+Resulting Test Failure:
+- UtilLib.Tests.UrlHostNameParserTests.ParseHostName_ValidHttpsUrl_ReturnsHostName (Failed)
+  Error Message:
+     Assert.That(actual, Is.EqualTo(expected))
+  Expected string length 14 but was 20. Strings differ at index 14.
+  Expected: "www.google.com"
+  But was:  "www.google.combroken"
+
+3. Restored Test Run (Green):
+We restored the code to its original implementation:
+    string hostName = url.Split(':')[1].Substring(2).Split('/')[0];
+
+Resulting Test Output:
+Passed! - Failed: 0, Passed: 2, Skipped: 0, Total: 2, Duration: 22 ms

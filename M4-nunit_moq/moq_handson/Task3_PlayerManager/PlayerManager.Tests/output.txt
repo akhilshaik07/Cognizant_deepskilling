@@ -1,0 +1,6 @@
+Test Run Successful.
+Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
+
+Passed Test Cases:
+- PlayerManager.Tests.PlayerManagerTests.TestRegisterNewPlayer_Success (Passed)
+- PlayerManager.Tests.PlayerManagerTests.TestRegisterNewPlayer_AlreadyExists_ThrowsException (Passed)

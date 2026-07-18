@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/FourSeasonsLib/">
+    <Project Path="FourSeasonsLib/SeasonsLib.csproj" />
+  </Folder>
+  <Project Path="FourSeasonsLib.Tests/FourSeasonsLib.Tests.csproj" />
+</Solution>

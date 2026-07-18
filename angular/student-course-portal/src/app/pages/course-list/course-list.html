@@ -1,0 +1,23 @@
+<div>
+  <h2>Available Courses <span *ngIf="searchTerm"> (Searching: {{ searchTerm }})</span></h2>
+  
+  <div *ngIf="errorMessage$ | async as errorMessage" style="color: red; padding: 10px; border: 1px solid red;">
+    {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="(isLoading$ | async) && !(errorMessage$ | async); else courseGrid">
+    <p>Loading courses...</p>
+  </div>
+  
+  <ng-template #courseGrid>
+    <div class="grid" *ngIf="courses$ | async as courses">
+      <app-course-card 
+        *ngFor="let course of courses; trackBy: trackByCourseId"
+        [course]="course"
+        appHighlight
+        (click)="goToCourseDetail(course.id)"
+        style="cursor: pointer;">
+      </app-course-card>
+    </div>
+  </ng-template>
+</div>

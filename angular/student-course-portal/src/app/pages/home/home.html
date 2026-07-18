@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>{{ portalName }}</h1>
+  <p style="color: var(--text-muted); margin-bottom: 2rem;">Manage your courses, view your profile, and keep track of your grades.</p>
+  
+  <div class="stats-row" style="display: flex; gap: 2rem; margin-bottom: 2rem; padding: 1.5rem; background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow);">
+    <span style="font-weight: 500;">Courses Available: <span style="color: var(--primary-color);">{{ (courses$ | async)?.length }}</span></span>
+    <span style="font-weight: 500;">Enrolled: <span style="color: var(--primary-color);">3</span></span>
+    <span style="font-weight: 500;">GPA: <span style="color: var(--primary-color);">3.8</span></span>
+  </div>
+
+  <app-course-summary-widget></app-course-summary-widget>
+  <app-notification></app-notification>
+
+  <div style="margin: 2rem 0; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+      <button [disabled]='!isPortalActive' (click)='onEnrollClick()'>Enroll Now</button>
+      <span style="color: var(--success); font-weight: 500;">{{ message }}</span>
+    </div>
+
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <label style="font-weight: 500;">Search: </label>
+      <input [(ngModel)]='searchTerm' (keyup.enter)="onSearch()" placeholder="Search courses..." style="width: 250px;">
+      <button class="btn-secondary" (click)="onSearch()">Search</button>
+    </div>
+    <p *ngIf="searchTerm" style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Searching for: {{ searchTerm }}</p>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+1. Initial Test Run (Green):
+Total tests: 5. Passed: 5. Failed: 0. Skipped: 0.
+Passed Test Cases:
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_ValidCredentialsUser11_ReturnsWelcomeMessage (Passed)
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_ValidCredentialsUser22_ReturnsWelcomeMessage (Passed)
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_InvalidCredentials_ReturnsErrorMessage (Passed)
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_EmptyUserId_ThrowsArgumentException (Passed)
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_EmptyPassword_ThrowsArgumentException (Passed)
+
+2. Broken Test Run (Red):
+We temporarily modified the welcome message format in AccountsManager.cs:
+    outputMsg = string.Format("Welcome {0}!!!broken", userId);
+
+Resulting Test Failures:
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_ValidCredentialsUser11_ReturnsWelcomeMessage (Failed)
+  Expected: "Welcome user_11!!!"
+  But was:  "Welcome user_11!!!broken"
+- AccountsManagerLib.Tests.AccountsManagerTests.ValidateUser_ValidCredentialsUser22_ReturnsWelcomeMessage (Failed)
+  Expected: "Welcome user_22!!!"
+  But was:  "Welcome user_22!!!broken"
+
+3. Restored Test Run (Green):
+We restored the code to its original implementation:
+    outputMsg = string.Format("Welcome {0}!!!", userId);
+
+Resulting Test Output:
+Passed! - Failed: 0, Passed: 5, Skipped: 0, Total: 5, Duration: 18 ms

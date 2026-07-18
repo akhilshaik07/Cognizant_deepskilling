@@ -1,0 +1,3 @@
+﻿Without Token response status code: 401
+
+With Token response: This is protected data.

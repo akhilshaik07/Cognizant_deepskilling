@@ -1,0 +1,33 @@
+1. Initial Test Run (Green):
+Total tests: 8. Passed: 8. Failed: 0. Skipped: 0.
+Passed Test Cases:
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckNullValues_NoNullItemsClassic (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckNullValues_NoNullItemsConstraint (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckEmployeeId100Exists_EmployeeExistsClassic (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckEmployeeId100Exists_EmployeeExistsConstraint (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckUniqueEmployees_AllItemsAreUniqueClassic (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckUniqueEmployees_AllItemsAreUniqueConstraint (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CompareWithPreviousYearsJoined_CollectionsAreEqualClassic (Passed)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CompareWithPreviousYearsJoined_CollectionsAreEqualConstraint (Passed)
+
+2. Broken Test Run (Red):
+We temporarily introduced a null element to the static employees collection:
+    new Employee { EmpId=103, EmpName="Allen",DOJ=DateTime.Now.AddYears(-7),Salary=50000},
+    null!,
+
+Resulting Test Failures:
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckNullValues_NoNullItemsClassic (Failed)
+  Expected: all items not null
+  But was:  < <CollectionsLib.Employee>, <CollectionsLib.Employee>, <CollectionsLib.Employee>, <CollectionsLib.Employee>, null >
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CheckNullValues_NoNullItemsConstraint (Failed)
+  Expected: no item null
+  But was:  < <CollectionsLib.Employee>, <CollectionsLib.Employee>, <CollectionsLib.Employee>, <CollectionsLib.Employee>, null >
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CompareWithPreviousYearsJoined_CollectionsAreEqualClassic (Failed with NullReferenceException)
+- CollectionsLib.Tests.EmployeeManagerTests.GetEmployees_CompareWithPreviousYearsJoined_CollectionsAreEqualConstraint (Failed with NullReferenceException)
+
+3. Restored Test Run (Green):
+We restored the code by removing the null element:
+    new Employee { EmpId=103, EmpName="Allen",DOJ=DateTime.Now.AddYears(-7),Salary=50000},
+
+Resulting Test Output:
+Passed! - Failed: 0, Passed: 8, Skipped: 0, Total: 8, Duration: 25 ms

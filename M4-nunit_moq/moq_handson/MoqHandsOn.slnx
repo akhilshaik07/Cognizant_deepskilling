@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Task1_MailSender/">
+    <Project Path="Task1_MailSender/CustomerComm.Tests/CustomerComm.Tests.csproj" />
+    <Project Path="Task1_MailSender/CustomerCommLib/CustomerCommLib.csproj" />
+  </Folder>
+  <Folder Name="/Task2_FileExplorer/">
+    <Project Path="Task2_FileExplorer/DirectoryExplorer.Tests/DirectoryExplorer.Tests.csproj" />
+    <Project Path="Task2_FileExplorer/MagicFilesLib/MagicFilesLib.csproj" />
+  </Folder>
+  <Folder Name="/Task3_PlayerManager/">
+    <Project Path="Task3_PlayerManager/PlayerManager.Tests/PlayerManager.Tests.csproj" />
+    <Project Path="Task3_PlayerManager/PlayersManagerLib/PlayersManagerLib.csproj" />
+  </Folder>
+</Solution>

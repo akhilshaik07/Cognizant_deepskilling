@@ -1,0 +1,16 @@
+<div *ngIf="course$ | async as course; else noCourse">
+  <h2>{{ course.name }} Details</h2>
+  <p>Code: {{ course.code }}</p>
+  <p>Credits: {{ course.credits | creditLabel }}</p>
+  <p>Status: {{ course.gradeStatus }}</p>
+</div>
+<ng-template #noCourse>
+  <p>Loading course...</p>
+</ng-template>
+
+<div *ngIf="students$ | async as students">
+  <h3>Enrolled Students:</h3>
+  <ul>
+    <li *ngFor="let student of students">{{ student.name }}</li>
+  </ul>
+</div>

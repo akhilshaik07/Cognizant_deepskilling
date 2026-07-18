@@ -1,0 +1,5 @@
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+  <h3>Course Summary Widget</h3>
+  <p>Total Courses from Service: {{ (courseService.getCourses() | async)?.length }}</p>
+  <button (click)="addRandomCourse()">Add Random Course</button>
+</div>

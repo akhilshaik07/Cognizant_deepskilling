@@ -1,0 +1,6 @@
+@Task2_SecureEndpoint_HostAddress = http://localhost:5004
+
+GET {{Task2_SecureEndpoint_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

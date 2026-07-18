@@ -1,0 +1,10 @@
+FourSeasonsLib (SeasonTeller) Test Execution Results:
+
+Test run for C:\Users\user\Downloads\deepskilling\nunit_moq\nunit_handson_work\FourSeasonsLib.Tests\bin\Debug\net10.0\FourSeasonsLib.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    26, Skipped:     0, Total:    26, Duration: 48 ms - FourSeasonsLib.Tests.dll (net10.0)
+
+Tested methods:
+- DisplaySeasonBy_ValidMonth_ReturnsExpectedSeason_StraightForward (using TestCaseData)
+- DisplaySeasonBy_ValidMonth_ReturnsExpectedSeason_Alternate (using explicit Assert.That)

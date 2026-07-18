@@ -1,0 +1,18 @@
+Test Run Results:
+Total tests: 10. Passed: 9. Failed: 1. Skipped: 0.
+
+Failed Test Case (Expected):
+- CalcLibrary.Tests.SimpleCalculatorTests.TestDivision(10,0,0) (Failed)
+  Error Message: Division by zero
+  Reason: Demonstrating the use of Assert.Fail when capturing Division by Zero exceptions.
+
+Passed Test Cases:
+- CalcLibrary.Tests.SimpleCalculatorTests.TestSubtraction(10,5,5) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestSubtraction(5,10,-5) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestSubtraction(0,0,0) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestMultiplication(10,5,50) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestMultiplication(-2,5,-10) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestMultiplication(0,5,0) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestDivision(10,5,2) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestDivision(15,3,5) (Passed)
+- CalcLibrary.Tests.SimpleCalculatorTests.TestAddAndClear (Passed)

@@ -1,0 +1,49 @@
+<div>
+  <h2>Student Enrollment Request</h2>
+
+  <form #enrollForm="ngForm" (ngSubmit)="onSubmit(enrollForm)">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="studentName" ngModel required minlength="3" #nameCtrl="ngModel">
+      <span class="error" *ngIf="nameCtrl.touched && nameCtrl.errors?.['required']">Name is required</span>
+      <span class="error" *ngIf="nameCtrl.touched && nameCtrl.errors?.['minlength']">Name must be at least 3 characters</span>
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="studentEmail" ngModel required email #emailCtrl="ngModel">
+      <span class="error" *ngIf="emailCtrl.touched && emailCtrl.errors?.['required']">Email is required</span>
+      <span class="error" *ngIf="emailCtrl.touched && emailCtrl.errors?.['email']">Must be a valid email</span>
+    </div>
+
+    <div>
+      <label>Course ID:</label>
+      <input type="number" name="courseId" ngModel required #courseCtrl="ngModel">
+      <span class="error" *ngIf="courseCtrl.touched && courseCtrl.errors?.['required']">Course ID is required</span>
+    </div>
+
+    <div>
+      <label>Preferred Semester:</label>
+      <select name="preferredSemester" ngModel required #semesterCtrl="ngModel">
+        <option value="Odd">Odd</option>
+        <option value="Even">Even</option>
+      </select>
+      <span class="error" *ngIf="semesterCtrl.touched && semesterCtrl.errors?.['required']">Semester is required</span>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" name="agreeToTerms" ngModel required #termsCtrl="ngModel">
+        I agree to the terms
+      </label>
+      <span class="error" *ngIf="termsCtrl.touched && termsCtrl.errors?.['required']">You must agree to the terms</span>
+    </div>
+
+    <button type="submit" [disabled]="enrollForm.invalid">Submit</button>
+    <button type="button" (click)="enrollForm.resetForm(); submitted = false">Reset</button>
+  </form>
+
+  <div *ngIf="submitted" class="success-message">
+    Enrollment request submitted successfully!
+  </div>
+</div>
