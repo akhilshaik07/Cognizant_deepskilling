@@ -1,4 +1,6 @@
 bin/
 obj/
+*.log
+log/
 *.db
 *.pdb
